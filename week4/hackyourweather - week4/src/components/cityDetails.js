@@ -6,11 +6,11 @@ const kelvinCelcius = (kelvin)=> {return (kelvin-273).toFixed(2)};
 
 const CityDetails = ( {cityInfo, deleteItem} ) => {
 
-    return cityInfo.map((item, index) => {
+    return cityInfo.map((item, cityid) => {
 
         return (
 
-            <div className = 'details' key= {index}>
+            <div className = 'details' key= {cityid}>
                 <Link to={'/' + item.id} className='graphUrl'>    
                     <h1 style = {{fontSize : '1.5em'}}> {item.name}, {item.sys.country}</h1>
                     <p style={{fontWeight:'bold', fontSize:'1em'}}> {item.weather[0].description}</p>
