@@ -6,7 +6,7 @@ const Search = ( {getCity} ) => {
     const [cityReq, setCityReq] = useState('');
 
     const onClickEvent= event => {
-        if (cityReq === '') {
+        if (cityReq.length  === '') {
             return alert('Input invalid')
         } else{
             event.preventDefault(); // prevents a browser from reloading the page.
